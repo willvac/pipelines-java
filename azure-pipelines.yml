@@ -14,6 +14,8 @@ stages:
       - bash: echo hello world!!!
       - bash: ls -al
       - bash: ls -ltr
+      - bash: mvn clean package
+      - bash: mkdir helloworld && ls -ltr
       - task: Maven@3
         inputs:
           mavenPomFile: 'pom.xml'
